@@ -16,12 +16,12 @@ import java.awt.event.ActionEvent;
 
 public class Error extends JDialog {
 
-	public Error() {
-		setTitle("B\u0142\u0105d");
+	public Error(String msg) {
+		setTitle("Wysy³anie danych");
 		setResizable(false);
 		setBounds(605, 425, 262, 133);
 		
-		JLabel lblPolaZostanyWypenione = new JLabel("Pola zosta\u0142ny wype\u0142nione niepoprawnie");
+		JLabel lblPolaZostanyWypenione = new JLabel(msg);
 		
 		JButton btnOk = new JButton("OK");
 		btnOk.addActionListener(new ActionListener() {

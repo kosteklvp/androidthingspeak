@@ -89,14 +89,14 @@ public class Main extends JFrame {
 				
 				if(tfTemperatura.getText().trim().isEmpty() || tfWilgotnosc.getText().trim().isEmpty()) {
 					System.out.println("Proszê wype³niæ oba pola");
-					Error error = new Error();
+					Error error = new Error("Pola zosta³y wype³nione nieprawid³owo");
 				} else {
 					int temperatura, wilgotnosc;
 					temperatura = Integer.parseInt(tfTemperatura.getText().trim());
 					wilgotnosc = Integer.parseInt(tfWilgotnosc.getText().trim());
 					
 					connectTo("CVTZBYR7ZWSMP1UP", temperatura + "", wilgotnosc + "");
-					System.out.println("Wys³ano " + temperatura + " i " + wilgotnosc);
+					Error error = new Error("Dane wys³ane");
 				}
 			}
 		});
